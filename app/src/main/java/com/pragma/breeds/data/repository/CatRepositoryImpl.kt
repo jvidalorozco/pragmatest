@@ -16,7 +16,6 @@ class CatRepositoryImpl @Inject constructor(
         return try {
             Resource.Success(data = apiCats.getBreeds(API_KEY).body())
         } catch(exception: Exception) {
-            Log.d("REPOSITR","${exception.message}")
             Resource.Error(ERROR_GENERIC)
         }
     }
